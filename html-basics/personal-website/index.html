@@ -6,16 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tori Luszczek personal website!</title>
   </head>
-  <body>
+  <body style="background-color:pink";>
+
     <h1>Tori Luszczek</h1>
     <br />
+   
     <nav>
-      <a href="contact.html">Contact</a>
-      <a href="bio.html">My bio!</a>
+      <a href="#contacts">Contact</a>
+      <a href="#bio">My bio!</a>
+      <!-- links to places on the website-->
     </nav>
 
-    <img src="/assets/my picture.jpg" alt="a picture of my face" />
-    <hr />
-    <main></main>
+    
+    
+    <main>
+    <img src="/assets/my picture.jpg" alt="a picture of my face"  width="20%" />
+    <!-- picture here--><!-- should we do a floating image once we know CSS?-->
+  
+    <hr /> <!-- a line break-->
+    <a name="contacts"></a> <!-- there should link the user to contacts here if they click the link on nav-->
+      <table> <!-- table to keep everything in the same line-->
+        <tbody>
+          <tr>
+            <td>number: +49-176-470-10-579</td>
+            <td>email: wuszczek@gmail.com</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/ToriLus"><img src="/assets/github.jpg" alt="github logo" height="50px" width="50px"></a></td>
+            <td><a href"https://www.codewars.com/users/ToriLus"><img src="/assets/codewars.jpg" alt="codewars logo" height="50px" width="50px"></a></td>
+            <td><a href="https://www.linkedin.com/in/wiktoria-luszczek-b03a67105/"><img src="/assets/linkedin.jpg" alt="linkedin logo" height="50px" width="70px"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+      <section>
+        <a name="bio"></a>
+        <h2>About me!</h2>
+        <p>Hi there! I'm Tori, a software develpoper in training! I went through different careers in my life. After finishing a degree in psychology I worked mostly in customer service but was absolutely fascinated by code. After being made redundant following the closure of my department, I've decided to made web development a chance.
+            <p></p> At the moment I'm learning the full stack at Spiced Academy. 
+            <ul><b>Currently learning:<p></p></b>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+        <ol><b>In the future I will learn:<p></p></b>
+            <li>C#</li>
+            <li>unity framework!</li>
+        </ol>
+       </p>
+      </section>
+
+
+      <h3>What I did before</h3>
+      <ul>
+        <li><b>sennder - sales development representative</b>- August 2021 - January 2023</li>
+        <li><b>Tesco bank - customer service representative</b> - August 2020 - August 2021</li>
+        <li><b>University of Aberdeen - student of Psychology</b> - 2014 - 2020</li>
+      </ul>
+
+
+
+    </main>
+
+    <footer>Tori Luszczek &copy;</footer>
+
   </body>
 </html>
