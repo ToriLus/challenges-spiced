@@ -31,18 +31,32 @@ button {
 
 .button1 {
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
+  border-radius: 15px;
+  border-color: cornflowerblue;
+  border-width: 5px;
 }
 
 .button2 {
   /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
+  background-color: lemonchiffon;
+  color: skyblue;
 }
 
 .button3 {
   /*Style me! You can test out changing the font, or font size, ...*/
+  font-size: 50px;
+  font-family: single-day;
+}
+
+@font-face {
+  font-family: "single-day";
+  src: url(/css/SingleDay-Regular.ttf);
 }
 
 .button4 {
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
+  box-shadow: inset 10px 5px 6px coral;
+  text-shadow: 5px 5px 10px cornflowerblue;
 }
 
 /* Feel free to play around with other properties, as well. */
