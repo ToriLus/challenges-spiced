@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+article {
+  background-color: azure;
+  border-radius: 25px;
+}
+
+body {
+  background-color: lightslategray;
+} 
+
+img {
+  border-radius: 40px; /* sets round edges to the image */
+  padding: 25px;
+  
+} 
+
+h2 {
+  margin: 25px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+  margin-left: 25px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.monkey-class {
+    color: grey;
+}
+
+button {
+  margin: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: azure;
+  border-radius: 5px;
+  border:2px;
+  color: #1DA1F2;
+  }
