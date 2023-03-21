@@ -34,5 +34,3 @@ secondChoiceButton.addEventListener("click", () => {
   secondChoiceButton.classList.add("active-choice");
   console.log("Selected second choice");
 });
-
-
