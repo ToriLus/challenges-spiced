@@ -7,7 +7,8 @@ console.log("Exercise 1:");
 */
 
 // Uncomment the next line of code and figure out why it does not work:
-// logText;
+
+logText(); //it didn't have a ()
 
 function logText() {
   console.log("This text does not appear. Why?");
@@ -37,7 +38,11 @@ greetMary();
 
 // --v-- write your code here --v--
 
-function greet() {}
+function greet(name) {
+  console.log("Welcome " + name + ", good to see you again!");
+}
+
+greet("Bobby");
 
 // --^-- write your code here --^--
 
@@ -49,4 +54,8 @@ console.log("3:");
 
 // --v-- write your code here --v--
 
+function logSeparation(numberOfExercise) {
+  console.log("--------------- \n" + numberOfExercise + ":");
+}
+logSeparation(5);
 // --^-- write your code here --^--
