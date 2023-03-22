@@ -17,24 +17,61 @@
       </p>
 
       <form aria-labelledby="form-heading" aria-describedby="form-description">
-        <fieldset>
+        
           <legend>Enter your information</legend>
 
           <!-- Email: label & input -->
+          <label for="user-email">Email:</label>
+          <input type="email" name="user-email" id="user-email" />
 
           <!-- Date: label & input -->
+          <label for="visit-date">Visit Date:</label>
+          <input type="date" name="visit-date" id="visit-date" />
 
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
             <!-- Radio Buttons: labels & inputs -->
+
+            <label for="relaxed-sloths">relaxed sloths </label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="relaxed-sloths"
+              value="relaxed-sloths"
+            />
+
+            <label for="jumpy-kangaroos">jumpy kangaroos</label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="jumpy-kangaroos"
+              value="jumpy-kangaroos"
+            />
+
+            <label for="thieving-racoons">thieving racoons</label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="thieving-racoons"
+              value="thieving-racoons"
+            />
           </fieldset>
 
           <!-- Textarea: label & input -->
-
+          <label for="any-concerns">Any Concerns?</label>
+          <textarea id="any-concerns" name="any-concerns" rows="8" cols="20" >Any Concerns?</textarea>
           <!-- Two Checkboxes: labels & inputs -->
 
+          <label for="consent">Do you consent to data processing?</label>
+          <input type="checkbox" id="consent" name="consent" value="consent">
+
+          <label for="newsletter"> Do you want to sign up to our newsletter?</label>
+          <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+
           <!-- Two Buttons: reset & submit -->
+          <input type="submit">
+          <input type="reset">
         </fieldset>
       </form>
     </section>
