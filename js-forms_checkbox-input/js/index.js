@@ -16,6 +16,8 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
+  console.log(formElements.colorBlue.checked);
+  console.log(formElements.colorBlue.value);
   // --^-- write your code here --^--
 
   // eslint-disable-next-line no-alert
