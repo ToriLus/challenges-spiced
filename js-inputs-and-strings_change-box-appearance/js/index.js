@@ -16,3 +16,19 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const inputColor = document.querySelector('[data-js="input-color"]');
+
+const inputRadius = document.querySelector('[data-js="input-radius"]');
+
+const inputRotation = document.querySelector('[data-js="input-rotation"]');
+
+inputColor.addEventListener("input", (event) => {
+  const val = event.target.value;
+  console.log(event.target.value);
+  //   box.style.background = "hsl(" + val + ", 50%, + 50%) "; << it should work but doesnt
+
+  box.style.background = "hsl((${val}";
+});
+
+const box = document.querySelector('[data-js="box"]');
