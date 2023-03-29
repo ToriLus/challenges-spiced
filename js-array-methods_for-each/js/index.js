@@ -19,4 +19,26 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+//task one
+
+colors.forEach((color) => {
+  const createDiv = document.createElement("section");
+  createDiv.style.backgroundColor = color;
+  createDiv.classList.add("color-box");
+  document.body.append(createDiv);
+});
+
+//task two
+
+function renderColorBox(color) {
+  const createDiv = document.createElement("div");
+  createDiv.style.backgroundColor = color;
+  createDiv.classList.add("color-box");
+  document.body.append(createDiv);
+}
+
+colors.forEach((color) => renderColorBox(color));
+
+//also task two i guess
+
+colors.forEach(renderColorBox, colors);
