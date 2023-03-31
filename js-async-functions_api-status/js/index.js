@@ -37,10 +37,10 @@ async function checkIfApiIsAvailable() {
   //this is literally the worst way this could be done, but my TRY statement does not work with anything that is NOT a function. So I am creating the function ONLY if the result.ok returns as TRUE. I tried passing response.ok into the TRY function but it would always return YES, even if the bool was false. If anyone Has any BETTER idea how to do it, please LET ME KNOW.
   try {
     randomfucct();
-    icon.innerText = "ues";
+    icon.innerText = "✅";
     console.log(response.ok);
   } catch (error) {
-    icon.innerText = "no";
+    icon.innerText = "❌";
   }
   console.log(response);
   console.log(response.ok);
