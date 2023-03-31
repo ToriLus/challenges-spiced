@@ -24,7 +24,13 @@ startRaceButton.addEventListener("click", () => {
    **/
 
   // --v-- write your code here --v--
+  async function run() {
+    await animateRunner(runner1);
+    await animateRunner(runner2);
+    animateRunner(runner3);
+  }
 
+  run();
   // --^-- write your code here --^--
 
   startRaceButton.removeAttribute("disabled");
