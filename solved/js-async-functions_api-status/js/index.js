@@ -22,28 +22,27 @@ async function checkIfApiIsAvailable() {
   // --v-- write your code here --v--
   icon.innerText = "⏳";
 
-  let response = await fetch(apiStatusUrl);
+  // let response = await fetch(apiStatusUrl);
 
   // if (response.ok == true) {
   //   icon.innerText = "yes";
   // } else {
   //   icon.innerText = "no";
   // }
-  if (response.ok == true) {
-    function randomfucct() {}
-  } else {
-  }
 
   //this is literally the worst way this could be done, but my TRY statement does not work with anything that is NOT a function. So I am creating the function ONLY if the result.ok returns as TRUE. I tried passing response.ok into the TRY function but it would always return YES, even if the bool was false. If anyone Has any BETTER idea how to do it, please LET ME KNOW.
   try {
-    randomfucct();
-    icon.innerText = "✅";
+    let response = await fetch(apiStatusUrl);
+    if (response.ok == true) {
+      icon.innerText = "✅";
+    } else {
+      icon.innerText = "❌";
+    }
     console.log(response.ok);
   } catch (error) {
-    icon.innerText = "❌";
+    console.log(error);
   }
-  console.log(response);
-  console.log(response.ok);
+
   // --^-- write your code here --^--
 }
 
