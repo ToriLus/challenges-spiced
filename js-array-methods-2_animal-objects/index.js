@@ -95,35 +95,49 @@ const indexOfAnimalWithNameLongerFive = animals.findIndex(
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
-const animalsSortedAlphabetically = animals
+const animalsSortedAlphabetically = animals.slice().sort((a, b) => {
+  const nameA = a.name;
+  const nameB = b.name;
+  if (nameA > nameB) {
+    return 1;
+  } else if (nameA < nameB) {
+    return -1;
+  }
+  return 0;
+});
+
+const animalsSortedByWeightStartingWithLowest = animals
   .slice()
-  .sort((animalOne, animalTwo) => {
-    const nameA = animalOne.name;
-    const nameB = animalTwo.name;
-    if (nameA > nameB) {
-      return 1;
-    } else if (nameA < nameB) {
-      return -1;
-    }
-    return 0;
-  });
+  .sort((a, b) => a.weight - b.weight);
 
-console.log(animalsSortedAlphabetically);
+const animalsSortedByWeightReversed = animals
+  .slice()
+  .sort((a, b) => b.weight - a.weight);
 
-const animalsSortedByWeightStartingWithLowest = null;
-
-const animalsSortedByWeightReversed = null;
-
-const animalWithWeightMoreThanFivehundredExists = null;
+const animalWithWeightMoreThanFivehundredExists = animals.filter(
+  (animal) => animal.weight > 500
+);
 
 // Hint: Filter for Europe first, then check every animal for its weight.
-const allAnimalsInEuropeWeighLessThanOnehundred = null;
+const allAnimalsInEuropeWeighLessThanOnehundred = animals
+  .filter((animal) => animal.continents.includes("Europe"))
+  .filter((animal) => animal.weight < 100);
 
 // Hint: filter + map + reduce
-const weightOfAllAnimalsInAfrica = null;
+const weightOfAllAnimalsInAfrica = animals
+  .filter((animal) => animal.continents.includes("Africa"))
+  .map((animal) => animal.weight)
+  .reduce((accumulator, currentValue) => accumulator + currentValue);
 
 // Hint: As above, but divided by the number of animals in Africa.
-const averageWeightOfAllAnimalsInAfrica = null;
+const averageWeightOfAllAnimalsInAfrica =
+  animals
+    .filter((animal) => animal.continents.includes("Africa"))
+    .map((animal) => animal.weight)
+    .reduce((accumulator, currentValue) => accumulator + currentValue) /
+  animals.filter((animal) => animal.continents.includes("Africa")).length;
+
+console.log(weightOfAllAnimalsInAfrica);
 
 export {
   firstAnimalStartingWithLetterG,
