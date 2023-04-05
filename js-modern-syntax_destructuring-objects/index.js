@@ -9,6 +9,7 @@ const company = {
   course: "Web Development",
   location: "Hamburg",
 };
+export const { name, course, location } = company;
 
 // example: export const {value1} = myObject;
 
@@ -20,6 +21,8 @@ const company = {
 //  2.3: 'isAdmin' property into the variable 'isAdmin' (false, if no such property exists)
 
 const user = { name: "John", years: 30 };
+const { years: age } = user;
+console.log(user);
 
 // EXERCISE 3
 // Extract the variables from the dog object and
