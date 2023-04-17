@@ -1,9 +1,16 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
 
 export default function App() {
+  const [holidays, setHolidays] = useState([]);
   function handleSubmit(event) {
     event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    setHolidays([data, ...holidays]);
+    event.target.reset();
+    event.target.elements.holiday.focus();
   }
 
   return (
