@@ -1,13 +1,15 @@
 import "./EntryForm.css";
 import Button from "../Button";
 
-export default function EntryForm(onAddEntry) {
-  function handleSubmit(onAddEntry) {
-    onAddEntry.preventDefault();
-    let Object = { motto: "test motto", notes: "test notes" };
-    let something = new FormData();
-    console.log("fuck me gently with a chainsaw");
+export default function EntryForm({ onAddEntry }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    onAddEntry(data);
+    event.target.reset();
   }
+
   return (
     <form className="entry-form" onSubmit={handleSubmit}>
       <h2 className="entry-form__title">New Entry</h2>

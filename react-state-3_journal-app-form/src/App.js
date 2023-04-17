@@ -10,7 +10,7 @@ function App() {
       <Header />
       <main className="app__main">
         <EntryForm />
-        <EntriesSection />
+        <EntriesSection entries />
       </main>
       <Footer />
     </div>
