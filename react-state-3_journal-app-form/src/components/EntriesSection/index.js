@@ -4,9 +4,9 @@ import Entry from "../Entry";
 import Tabs from "../Tabs";
 import Tab from "../Tab";
 import Badge from "../Badge";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
-const initialEntries = [
+const entries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
@@ -36,12 +36,7 @@ const initialEntries = [
   },
 ];
 
-function entriesFunct() {
-  const [entries, setEntry] = useState(initialEntries);
-  return entries;
-}
-
-export default function EntriesSection(entries) {
+export default function EntriesSection() {
   return (
     <section className="entries-section">
       <Tabs>
