@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "ghcd": "^0.2.1"
+    "ghcd": "^0.2.1",
+    "zustand": "^4.3.7"
   }
 }
